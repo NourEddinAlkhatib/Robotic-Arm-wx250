@@ -1,0 +1,11 @@
+roslaunch interbotix_xsarm_perception xsarm_perception.launch robot_model:=wx250 use_armtag_tuner_gui:=true use_pointcloud_tuner_gui:=true
+
+roslaunch interbotix_xsarm_control xsarm_control.launch robot_model:=wx250
+
+rosservice call /wx250/torque_enable group arm false
+
+realsense-viewer
+
+rostopic echo /wx250/joint_states
+
+roslaunch interbotix_xsarm_perception xsarm_perception.launch robot_model:=wx250 enable_pipeline:=true
