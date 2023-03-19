@@ -5,7 +5,7 @@ from interbotix_perception_modules.armtag import InterbotixArmTagInterface
 from interbotix_perception_modules.pointcloud import InterbotixPointCloudInterface
 
 # This script uses a color/depth camera to get the arm to find objects and pick them up.
-# This program scans the space after the arm tries to pick all the objects one time, then tries to pick them up again.
+# This program scans the space after the arm tries to pick all the objects one time.
 #
 # To get started, open a terminal and type 'roslaunch interbotix_xsarm_perception xsarm_perception.launch robot_model:=wx250'
 # Then change to this directory and type 'python3 version1.py'
@@ -29,7 +29,7 @@ def main():
     # sort them from min to max 'x' position w.r.t. the 'wx250/base_link' frame
     while True
     success, clusters = pcl.get_cluster_positions(ref_frame="wx250/base_link", sort_axis="x", reverse=True)
-    # pick up all the objects and drop them in a virtual basket in next to the robot
+    # pick up all the objects and drop them in a virtual basket next to the robot
     if success == True:
         for cluster in reversed(clusters):
                 x, y, z = cluster["position"]
