@@ -1,2 +1,2 @@
-# these are the files used for the Emarits Robotic Competion made by RIT, DFL, and KU. 
-# it is a pick and place application to a random groccery items, using the interbotix WX250.
+These are the files used for the Emirates Robotic Competition made by RIT, DFL, and KU. 
+It is a pick and place application to pick a random grocery items, using the interbotix WX250.
