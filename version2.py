@@ -83,9 +83,6 @@ def main():
             bot.arm.go_to_sleep_pose()
         else:
             break
-    else:
-        break
-        sys.exit()
 
 if __name__=='__main__':
     main()
